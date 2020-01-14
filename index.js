@@ -1,5 +1,6 @@
 var app = require('express')();
 var http = require('http').createServer(app);
+app.use(express.static('public'))
 var io = require('socket.io')(http);
 
 app.get('/', function(req, res){
